@@ -11,6 +11,40 @@
 
 <body>
 
+    <div class="container">
+        
+        {{> cabecalho}}
+
+        {{#erro_cadastro}}
+            {{> alerta}}
+        {{/erro_cadastro}}
+
+        <div class="row mt-5">
+
+            <div class="col-6 offset-3">
+
+                <p class="fs-1 mb-3">Formulário de registro</p>
+
+                <form action="/registrar_usuario" method="post">
+                    <label class="form-label" for="email">E-mail</label>
+                    <input class="form-control" type="email" name="email" id="email">
+                    <label class="form-label" for="senha">Senha</label>
+                    <input class="form-control" type="password" name="senha" id="senha">
+                    <label class="form-label" for="nome">Nome completo</label>
+                    <input class="form-control" type="text" name="nome" id="nome">
+                    <label class="form-label" for="data_nascimento">Data de nascimento</label>
+                    <input class="form-control" type="date" name="data_nascimento" id="data_nascimento">
+
+                    <button type="submit" class="btn btn-primary w-100 mt-3">Registrar</button>
+                </form>
+            </div>
+
+        </div>
+
+        {{> rodape}}
+
+    </div>
+
 </body>
 
 </html>

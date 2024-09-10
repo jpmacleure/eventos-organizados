@@ -12,6 +12,16 @@
 <body>
 
     <div class="container">
+        
+        {{> cabecalho}}
+        
+        {{#sucesso_cadastro}}
+            {{> alerta}}
+        {{/sucesso_cadastro}}
+
+        {{#erro_autenticacao}}
+            {{> alerta}}
+        {{/erro_autenticacao}}
 
         <div class="row mt-5">
 
@@ -19,7 +29,7 @@
 
                 <p class="fs-1 mb-3">Formulário de entrada</p>
 
-                <form action="" method="post">
+                <form action="/autenticar" method="post">
                     <label class="form-label" for="email">E-mail</label>
                     <input class="form-control" type="email" name="email" id="email">
                     <label class="form-label" for="senha">Senha</label>
@@ -30,6 +40,8 @@
             </div>
 
         </div>
+
+        {{> rodape}}
 
     </div>
 
