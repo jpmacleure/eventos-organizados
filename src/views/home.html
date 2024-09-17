@@ -10,7 +10,22 @@
 </head>
 
 <body>
-    <h1>HOME</h1>
+
+    <div class="container">
+
+        {{> cabecalho_autorizado}}
+
+        <div class="row mt-5">
+
+            <div class="col-12">
+                <p class="fs-1"> Eventos recentes</p>
+            </div>
+
+            {{> grade_eventos}}
+        </div>
+
+    </div>
+
 </body>
 
 </html>

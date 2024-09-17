@@ -61,7 +61,7 @@ function verificarAutenticacao(req, res, next) {
     }   
 }
 
-function sair(req, res) {
+function getSair(req, res) {
     req.session.destroy();
     res.redirect('/');
 }
@@ -72,5 +72,5 @@ module.exports = {
     postRegistrarUsuario,
     postAutenticar,
     verificarAutenticacao,
-    sair
+    getSair
 }

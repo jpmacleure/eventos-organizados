@@ -4,6 +4,7 @@ const autenticacaoController = require('../controllers/autenticacaoController');
 
 router.get('/entrar', autenticacaoController.getEntrarView);
 router.get('/registrar', autenticacaoController.getRegistrarView);
+router.get('/sair', autenticacaoController.getSair);
 router.post('/registrar_usuario', autenticacaoController.postRegistrarUsuario);
 router.post('/autenticar', autenticacaoController.postAutenticar);
 
