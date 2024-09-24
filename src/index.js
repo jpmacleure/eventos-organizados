@@ -1,6 +1,7 @@
 const express = require('express');
 const mustacheExpress = require('mustache-express');
 const session = require('express-session')
+require("dotenv").config();
 const db = require('./db')
 
 const app = express();
@@ -30,7 +31,7 @@ app.use('/', autenticacaoRouter);
 // Sincroniza o banco de dados
 db.sync();
 
-const PORT = 8080;
+const PORT = process.env.NODE_DOCKER_PORT || 8080;
 app.listen(PORT, ()=>{
     console.log('app rodando na porta ' + PORT);
 });
