@@ -13,6 +13,8 @@ RUN npm install
 # Copie o restante do código-fonte para o diretório de trabalho
 COPY ./src ./
 
+RUN chmod -R +w ./public
+
 # Exponha a porta em que a aplicação estará disponível (por exemplo, 3000)
 EXPOSE 8080
 
